@@ -1,0 +1,47 @@
+
+			<section id="orgs">
+				<h1> Organisations Involved</h1>
+
+					<div class="biogs">
+						<?php $loop = new WP_Query( array( 'post_type' => 'organisations', 'posts_per_page' => 6 ) );
+						while ( $loop->have_posts() ) : $loop->the_post();
+							echo '<div class="entry-content">';
+								the_post_thumbnail('thumbnail' );
+								the_title('<h2>', '</h2>');
+								//the_excerpt(); ?>
+								<button type="button"><a href="<?php the_permalink(); ?>">View Organisation</a></button>
+							<?php echo '</div>';
+
+						endwhile; wp_reset_query(); ?>
+					</div>
+
+			</section>
+
+			//css
+
+			#orgs {
+				@include row();
+
+				.biogs {
+
+					.entry-content {
+						@include span-columns (1);
+						@include rem(margin, 0 0 45px);
+						@include rem(padding, 0 45px);
+						background-color: lightslategrey;
+						text-align: center;
+
+						img.attachment-thumbnail.wp-post-image {
+							@include rem(margin, 10px auto);
+						}
+
+
+						@include media ($large-screen-up) {
+							@include span-columns (2);
+							@include rem(padding, 25px 50px);
+							margin-top: 0;
+
+						}
+					}
+				}
+			}
