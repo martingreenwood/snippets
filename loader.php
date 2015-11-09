@@ -15,7 +15,35 @@
 </div>
 
 
-CSS
+SCSS
+
+@-webkit-keyframes writeline {
+	0% { width : 0px; opacity: 0; }
+	33% { width : 15px; opacity : 1; }
+	70% { opacity : 1; }
+	100% {opacity : 0; }
+}
+
+@-moz-keyframes writeline {
+	0% { width : 0px; opacity: 0; }
+	33% { width : 15px; opacity : 1; }
+	70% { opacity : 1; }
+	100% {opacity : 0; }
+}
+
+@-o-keyframes writeline {
+	0% { width : 0px; opacity: 0; }
+	33% { width : 15px; opacity : 1; }
+	70% { opacity : 1; }
+	100% {opacity : 0; }
+}
+
+@keyframes writeline {
+	0% { width : 0px; opacity: 0; }
+	33% { width : 15px; opacity : 1; }
+	70% { opacity : 1; }
+	100% {opacity : 0; }
+}
 
 
 #loader {
